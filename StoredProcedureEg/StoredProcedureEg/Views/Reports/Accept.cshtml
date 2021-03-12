@@ -1,0 +1,30 @@
+﻿<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")"></script>
+@*@model RainbowEntertainment.Models.Movie*@
+@model StoredProcedureEg.Models.SalesByCategory_Result
+
+@using (Ajax.BeginForm("Accept", "Reports",
+new AjaxOptions
+{
+    InsertionMode = InsertionMode.Replace,
+    HttpMethod = "POST",
+    OnFailure = "searchFailed",
+    LoadingElementId = "ajax-loader",
+    UpdateTargetId = "searchresults",
+}))
+{
+    <span>Category Name: </span>
+    <input type="text" id="q" name="q" />
+    <img id="ajax-loader" src="@Url.Content("~/Images/ajax-loader.gif")" style="display:none;" />
+
+}
+<div id="searchresults"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#q").keyup(function (args) {
+            $(this).submit()
+        });
+        function searchFailed() {
+            $("#searchresults").html("Sorry, there was a problem with the search.");
+        }
+    });
+</script>

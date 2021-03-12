@@ -1,0 +1,88 @@
+﻿
+
+@media screen and (max-width:1200px) {
+
+    #message {
+        display:none;
+    }
+    #movie1 {
+        width:100px;
+        height:120px;
+    }
+    #movie2 {
+        width:100px;
+        height:120px;
+    }
+    #movie3 {
+        width:100px;
+        height:120px;
+    }
+    #movie4 {
+        width:100px;
+        height:120px;
+    }
+    #movie5 {
+        width:100px;
+        height:120px;
+    }
+    #movie6 {
+        width:100px;
+        height:120px;
+    }
+    #movie7 {
+        width:100px;
+        height:120px;
+    }
+    #movie8 {
+        width:100px;
+        height:120px;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+
+    #message {
+        display:none;
+    }
+
+
+    #banner {
+        width: 100px;
+        height: 120px;
+    }
+
+    #movie1 {
+        width:80px;
+        height:99px;
+    }
+    #movie2 {
+        width:80px;
+        height:99px;
+    }
+    #movie3 {
+        width:80px;
+        height:99px;
+    }
+    #movie4 {
+        width:80px;
+        height:99px;
+    }
+    #movie5 {
+        width:80px;
+        height:99px;
+    }
+    #movie6 {
+        width:80px;
+        height:99px;
+    }
+    #movie7 {
+        width:80px;
+        height:99px;
+    }
+    #movie8 {
+        width:80px;
+        height:99px;
+    }
+
+}

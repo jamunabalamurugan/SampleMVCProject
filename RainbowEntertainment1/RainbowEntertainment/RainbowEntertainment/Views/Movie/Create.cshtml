@@ -1,0 +1,74 @@
+﻿@model RainbowEntertainment.Models.Movie
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Movie</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MovieName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MovieName)
+            @Html.ValidationMessageFor(model => model.MovieName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Director)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Director)
+            @Html.ValidationMessageFor(model => model.Director)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Producer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Producer)
+            @Html.ValidationMessageFor(model => model.Producer)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cast)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cast)
+            @Html.ValidationMessageFor(model => model.Cast)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Duration)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Duration)
+            @Html.ValidationMessageFor(model => model.Duration)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GenreID, "genre")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("GenreID", String.Empty)
+            @Html.ValidationMessageFor(model => model.GenreID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

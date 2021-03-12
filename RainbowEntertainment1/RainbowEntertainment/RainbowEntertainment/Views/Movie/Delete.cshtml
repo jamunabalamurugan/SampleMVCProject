@@ -1,0 +1,60 @@
+﻿@model RainbowEntertainment.Models.Movie
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Movie</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MovieName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MovieName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Director)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Director)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Producer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Producer)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cast)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cast)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Duration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.genre.strGenre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.genre.strGenre)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

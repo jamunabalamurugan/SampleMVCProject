@@ -1,0 +1,97 @@
+﻿ <article>
+
+                                                @model IEnumerable<RainbowEntertainment.Models.Movie>
+
+                                                @{
+                                                    ViewBag.Title = "Index";
+                                                }
+
+                                         <p style="color: #f5eb8e; font size: medium;">
+@Html.ActionLink("Create New", "Create")
+                                             @Html.ActionLink("Movie Ratings", "MovieRatings")
+</p>
+<p>
+@using (Html.BeginForm())
+{
+<div style="float: left; padding: 5px; margin: 10px; font weight: bold;">
+   		Filter by Genre
+</div>
+   <div style="float: left; padding: 5px; margin: 10px; font weight: bold;">
+   		@Html.DropDownList("GenreID", "All")
+   </div>
+   <div style="float: left; padding: 5px; margin: 10px; font weight: bold;">
+<input type="submit" value="Filter Movies" />
+   </div>
+<br />
+}
+</p>
+<br />
+<p>
+<div style="float: left; padding: 5px; margin: 10px;">
+                                                @{
+                                                    if (Model.Count<RainbowEntertainment.Models.Movie>() > 0)
+                                                    {
+
+                                                    <table>
+                                                        <tr>
+                                                            <th>
+                                                                @Html.DisplayNameFor(model => model.MovieName)
+                                                            </th>
+                                                            <th>
+                                                                @Html.DisplayNameFor(model => model.Director)
+                                                            </th>
+                                                            <th>
+                                                                @Html.DisplayNameFor(model => model.Producer)
+                                                            </th>
+                                                            <th>
+                                                                @Html.DisplayNameFor(model => model.Cast)
+                                                            </th>
+                                                            <th>
+                                                                @Html.DisplayNameFor(model => model.Duration)
+                                                            </th>
+                                                            <th>
+                                                                @Html.DisplayNameFor(model => model.genre.strGenre)
+                                                            </th>
+                                                            <th></th>
+                                                        </tr>
+
+                                                        @foreach (var item in Model)
+                                                        {
+                                                            <tr>
+                                                                <td>
+                                                                    @Html.DisplayFor(modelItem => item.MovieName)
+                                                                </td>
+                                                                <td>
+                                                                    @Html.DisplayFor(modelItem => item.Director)
+                                                                </td>
+                                                                <td>
+                                                                    @Html.DisplayFor(modelItem => item.Producer)
+                                                                </td>
+                                                                <td>
+                                                                    @Html.DisplayFor(modelItem => item.Cast)
+                                                                </td>
+                                                                <td>
+                                                                    @Html.DisplayFor(modelItem => item.Duration)
+                                                                </td>
+                                                                <td>
+                                                                    @Html.DisplayFor(modelItem => item.genre.strGenre)
+                                                                </td>
+                                                                <td>
+                                                                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                                                </td>
+                                                            </tr>
+                                                        }
+
+                                                    </table>
+                                                    }
+                                                    else
+                                                    {
+                                                    <font style="color: red;"><h3>No movies exists.</h3></font>
+                                                    }
+                                                }
+    </div>
+</p>
+
+                                            </article>

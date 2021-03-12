@@ -1,0 +1,56 @@
+﻿@model RainbowEntertainment.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<fieldset>
+    <legend>Movie</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MovieName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MovieName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Director)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Director)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Producer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Producer)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cast)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cast)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Duration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.genre.strGenre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.genre.strGenre)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

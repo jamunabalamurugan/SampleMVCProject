@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Movies>
+  <Movie>
+    <Name>Avengers</Name>
+    <Director>Joss Whedon</Director>
+    <Producer>Kevin Feige </Producer>
+    <Cast>Scarlett </Cast>
+    <Rating>4</Rating>
+  </Movie>
+  <Movie>
+    <Name>Kung Fu Panda 2</Name>
+    <Director>Jennifer Yuh</Director>
+    <Producer>Melissa Cobb </Producer>
+    <Cast>Jack Black</Cast>
+    <Rating>4</Rating>
+  </Movie>
+  <Movie>
+    <Name>R. I. P. D.</Name>
+    <Director>Robert Schwentke</Director>
+    <Producer>Mike Richardson</Producer>
+    <Cast>Jeff Bridges</Cast>
+    <Rating>3</Rating>
+  </Movie>
+  <Movie>
+    <Name>The Wolverine</Name>
+    <Director>James Mangold</Director>
+    <Producer>Hugh Jackman</Producer>
+    <Cast>Hugh Jackman</Cast>
+    <Rating>5</Rating>
+  </Movie>
+</Movies>

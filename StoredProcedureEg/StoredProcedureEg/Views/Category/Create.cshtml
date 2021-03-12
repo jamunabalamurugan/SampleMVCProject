@@ -1,0 +1,10 @@
+﻿@model StoredProcedureEg.Models.Category
+@using (Html.BeginForm())
+    {
+    @Html.EditorForModel();
+
+    <input type="submit" name="Save" value="Save"/>
+    <input type="submit" name="Cancel" value="Cancel"/>
+
+}
+@ViewBag.Message
